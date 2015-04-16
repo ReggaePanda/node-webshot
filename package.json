@@ -1,6 +1,6 @@
 {
   "name": "webshot",
-  "version": "0.15.0",
+  "version": "0.15.4",
   "description": "Easy website screenshots",
   "author": "Brenden Kokoszka",
   "contributors": [
@@ -22,15 +22,17 @@
     "node >=0.7.00"
   ],
   "dependencies": {
+    "graceful-fs": "~3.0.4",
+    "cross-spawn": "^0.2.3",
     "tmp": "~0.0.23"
   },
   "optionalDependencies": {
     "phantomjs": "~1.9.7-1"
   },
   "devDependencies": {
+    "imagemagick": "git://github.com/rsms/node-imagemagick.git",
     "mocha": "*",
-    "should": "*",
-    "imagemagick": "git://github.com/rsms/node-imagemagick.git"
+    "should": "*"
   },
   "main": "./lib/webshot.js",
   "scripts": {

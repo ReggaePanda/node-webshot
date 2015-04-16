@@ -127,7 +127,8 @@ the callback in a call to webshot.
       <td>{}</td>
       <td>Object with key value pairs corresponding to phantomjs <a
       href="https://github.com/ariya/phantomjs/wiki/API-Reference#command-line-options">command
-      line options</a>.</td>
+      line options</a>. Don't include `--`. For example:
+      `phantomConfig: {'ignore-ssl-errors': 'true'}`</td>
     </tr>
     <tr>
       <th>customHeaders</th>
@@ -190,6 +191,9 @@ the callback in a call to webshot.
   </tbody>
 </table>
 
+### PhantomJS version
+By default this package installs PhantomJS 1.9.x. Several issues exist in this version that are fixed in v2, but v2 is not yet stable across all platforms. The `phantomPath` option can be used to get around this if you want to try a more recent PhantomJS version. See this issue: https://github.com/brenden/node-webshot/issues/100
+
 ### Phantom page properties
 In addition to these options, the following options can be specified and will be
 passed to the [Phantom page
@@ -245,6 +249,9 @@ that the [imagemagick CLI tools](http://www.imagemagick.org) be installed.
 
 ## Grunt
 [grunt-webshot](https://npmjs.org/package/grunt-webshot) is a Grunt wrapper for this package.
+
+## CLI
+[webshot-cli](https://npmjs.org/package/webshot-cli) is a CLI interface for this package.
 
 ## License
 ```
